@@ -6,8 +6,10 @@ from fastapi.middleware.cors import CORSMiddleware
 import logic 
 
 app = FastAPI(title="ViKi - API VKSND TP Đà Nẵng Trích xuất Hồ sơ Tố tụng")
-
-origins = [ "http://localhost:3000" ]
+origins = [
+    "http://localhost:3000",
+    "https://vks-viki-trichxuat.vercel.app", 
+]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
